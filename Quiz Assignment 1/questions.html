@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crazy quiz</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+<section class="container">
+<p id="count"></p>
+<p id="position"></p>
+
+<button onclick="check()" class="button2">Your Results</button>
+<button onclick="result()" class="button2">Your Crown</button>
+<button onclick="location.href = 'questions.html';" id="myButton" class="button1">Re-try quiz </button>
+<button onclick="location.href = 'webforum.html';" id="myButton" class="button1">Switch User </button>
+
+<script>
+	document.write("<br><h2>Please see your results before you are given your crown!")
+		var q1,q2,q3,q4,q5,q6,q7
+
+		alert(" Welcome to the Crazy Quiz! \n This is a multiple choice quiz.\n Press Enter to continue.")
+
+		q1=prompt("Q1: What is the captial city of Iceland?\n A: Dublin\n B: Toronto\n C: Reykjavik").toLowerCase()
+
+		q2=prompt("Q2: Who was the first president of the USA?:\n A: Barrick Obama\n B: Abraham Lincoln\n C: George Washington").toLowerCase()
+
+		q3=prompt("Q3: Who was the first person to summit Mt.Everest?\n A: Joe Rogan \n B: Joey Diaz \n C: Edmund Hillary").toLowerCase()
+
+		q4=prompt("Q4: Who played Sweeny Todd in the film Sweeny Toodd?\n A: Lenardo Di Caprio \n B: Johnny Depp\n C: Jack Black ").toLowerCase()
+
+		q5=prompt("Q5: Who discovered USA?\n A: Marco Polo \n B: Christopher Coloumbus\n C: Walter Raleigh").toLowerCase()
+
+		q6=prompt("Q6: Where is Coffee grown the most?\n A: India\n B: Mexico\n C: Uganda ").toLowerCase()
+
+		q7=prompt("Q7:Who has the scored the most goals in football in history?\n A: Pelé\n B: Bican\n C: Romário").toLowerCase()
+
+
+function check(){
+	count=0;
+	if(q1=="c"){
+	count++
+	}
+	if(q2=="c"){
+	count++
+	}
+	if(q3=="c"){
+	count++
+	}
+	if(q4=="b"){
+	count++
+	}
+	if(q5=="b"){
+	count++
+	}
+	if(q6=="a"){
+	count++
+	}
+	if(q7=="b"){
+	count++
+	}
+	document.getElementById('count').innerHTML="<h2>"+name+"You got "+count+ "/7 correct</h2>"
+	}
+
+function result(){
+
+	if(count===0){
+	document.getElementById('position').innerHTML="<h2>You didn't earn any crowns, Please Try again </h2>"
+
+}
+if(count/=1<=6){
+
+	document.getElementById('position').innerHTML="<h2>You have earned a silver crown!</h2>"
+	
+}
+if (count===7) {
+
+	document.getElementById('position').innerHTML="<h2>You have earned a gold crown! Well done!!</h2>"
+	}
+}
+</script>
+
+</section>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
